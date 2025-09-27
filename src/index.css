@@ -1,0 +1,12 @@
+.accordion-button {
+    cursor: pointer;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+  }
+  
+  .table > tbody > tr > td input {
+    width: 100%;
+  }
+  

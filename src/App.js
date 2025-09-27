@@ -11,17 +11,12 @@ function fetchCSV(url) {
   return fetch(url)
     .then(response => response.text())
     .then(text => {
-      console.log('Raw CSV fetched (first 200 chars):', text.slice(0, 200));
       const result = Papa.parse(text, {
         header: true,
         skipEmptyLines: true,
         quoteChar: '"',
         escapeChar: '"',
       });
-      if (result.errors.length) {
-        console.error('CSV parse errors:', result.errors);
-      }
-      console.log('Parsed rows count:', result.data.length);
       return result.data.map(row => ({
         section: row.Section || '',
         product: row.Product || '',
@@ -32,39 +27,23 @@ function fetchCSV(url) {
         askCount: 0,
       }));
     })
-    .catch(error => {
-      console.error('Failed to load or parse CSV:', error);
-      return [];
-    });
+    .catch(() => []);
 }
 
 export default function App() {
   const [inventory, setInventory] = useState([]);
   const [stagedItems, setStagedItems] = useState([]);
 
-  // Determine base path for fetching resources (GitHub Pages support)
-  const basePath = process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL : '';
-
   useEffect(() => {
     const storedInventory = localStorage.getItem(STORAGE_KEY);
     if (storedInventory) {
-      console.log('Loaded inventory from localStorage');
       setInventory(JSON.parse(storedInventory));
     } else {
-      console.log('Fetching inventory CSV');
-      fetchCSV(`${basePath}/Inventory.csv`)
-        .then(data => {
-          console.log('Fetched inventory data:', data);
-          setInventory(data);
-        })
-        .catch(() => {
-          setInventory([]);
-        });
+      fetchCSV('/Inventory.csv').then(data => setInventory(data));
     }
-  }, [basePath]);
+  }, []);
 
   useEffect(() => {
-    console.log('Inventory state updated:', inventory);
     if (inventory.length > 0) {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(inventory));
     }
@@ -72,8 +51,7 @@ export default function App() {
 
   function generateStage() {
     const selectedItems = inventory.filter(item => item.selected);
-    const copy = selectedItems.map(item => ({ ...item, askCount: 0 }));
-    setStagedItems(copy);
+    setStagedItems(selectedItems.map(item => ({ ...item, askCount: 0 })));
   }
 
   function exportInvoice() {
@@ -112,28 +90,28 @@ export default function App() {
 
   function resetInventory() {
     localStorage.removeItem(STORAGE_KEY);
-    fetchCSV(`${basePath}/Inventory.csv`).then(data => setInventory(data));
+    fetchCSV('/Inventory.csv').then(data => setInventory(data));
   }
 
   return (
-    <div style={{ padding: 20, fontFamily: 'Arial, sans-serif' }}>
-      <h1>Inventory Manager Web App</h1>
+    <div className="container my-4">
+      <h1 className="mb-4">Inventory Manager Web App</h1>
       <p>Inventory count: {inventory.length}</p>
       {inventory.length === 0 && <p>Loading inventory...</p>}
       {inventory.length > 0 && (
         <>
           <InventoryTable inventory={inventory} setInventory={setInventory} />
-          <div style={{ marginTop: 10 }}>
-            <button onClick={generateStage}>Generate Stage</button>
-            <button onClick={exportInventory} style={{ marginLeft: 10 }}>Export Inventory CSV</button>
-            <button onClick={resetInventory} style={{ marginLeft: 10 }}>Reset Inventory From CSV</button>
+          <div className="my-3">
+            <button className="btn btn-primary me-2" onClick={generateStage}>Generate Stage</button>
+            <button className="btn btn-secondary me-2" onClick={exportInventory}>Export Inventory CSV</button>
+            <button className="btn btn-warning" onClick={resetInventory}>Reset Inventory From CSV</button>
           </div>
         </>
       )}
       {stagedItems.length > 0 && (
         <>
           <StageView stagedItems={stagedItems} setStagedItems={setStagedItems} />
-          <button onClick={exportInvoice} style={{ marginTop: 10 }}>Export Invoice CSV</button>
+          <button className="btn btn-success mt-3" onClick={exportInvoice}>Export Invoice CSV</button>
           <InvoiceView stagedItems={stagedItems} />
         </>
       )}
