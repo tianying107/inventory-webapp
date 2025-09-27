@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/inventory-webapp/static/js/main.9cb0079a.js",
-    "index.html": "/inventory-webapp/index.html",
-    "main.9cb0079a.js.map": "/inventory-webapp/static/js/main.9cb0079a.js.map"
+    "main.js": "/inventory-app/static/js/main.a688a563.js",
+    "index.html": "/inventory-app/index.html",
+    "main.a688a563.js.map": "/inventory-app/static/js/main.a688a563.js.map"
   },
   "entrypoints": [
-    "static/js/main.9cb0079a.js"
+    "static/js/main.a688a563.js"
   ]
 }
