@@ -7,6 +7,8 @@ import { arrayToCsv } from './utils';
 
 const STORAGE_KEY = 'inventory-data-v1';
 
+const basePath = process.env.NODE_ENV === 'production' ? process.env.PUBLIC_URL : '';
+
 function fetchCSV(url) {
   return fetch(url)
     .then(response => response.text())
@@ -39,7 +41,7 @@ export default function App() {
     if (storedInventory) {
       setInventory(JSON.parse(storedInventory));
     } else {
-      fetchCSV('/Inventory.csv').then(data => setInventory(data));
+      fetchCSV(`${basePath}/Inventory.csv`).then(data => setInventory(data));
     }
   }, []);
 
@@ -90,7 +92,7 @@ export default function App() {
 
   function resetInventory() {
     localStorage.removeItem(STORAGE_KEY);
-    fetchCSV('/Inventory.csv').then(data => setInventory(data));
+    fetchCSV(`${basePath}/Inventory.csv`).then(data => setInventory(data));
   }
 
   return (
