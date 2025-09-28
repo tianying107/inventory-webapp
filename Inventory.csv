@@ -1,5 +1,5 @@
 Section,Product,Unit Price,Count,Description
-Laundry Products,Tide 132 oz,$15.00,1,146->132oz
+Laundry Products,Tide 132oz,$15.00,1,146->132oz
 Laundry Products,Tide 105oz,$12.00,3,mar 6 2024 $11->$13
 Laundry Products,Tide 84oz,$10.00,6,
 Laundry Products,Tide 98oz,$11.00,3,limit time offer
@@ -19,10 +19,9 @@ Laundry Products,Arm Hammer Deep Clean 102oz (2 blue),$8.00,5,
 Laundry Products,Arm Hammer Pod 44ct,$6.00,3,
 Laundry Products,Arm Hammer Pod 32ct,$4.00,10,white 4 other 5
 Laundry Products,Persil 34oz,$4.00,nan,40oz->34oz
-Laundry Products,Persil 100oz (2 blue),$10.00,4,
+Laundry Products,Persil 100oz,$10.00,4,
 Laundry Products,Persil 84oz,$9.00,8,
 Laundry Products,Persil 150oz,$15.00,2,
-Laundry Products,Persil Active Pods,$10.00,2,32 ct
 Laundry Products,Persil Pods 42 count,$10.00,6,
 Laundry Products,ALL 141oz,$12.00,2,
 Laundry Products,Gain 113oz,$9.00,4,
