@@ -1,12 +1,50 @@
-.accordion-button {
-    cursor: pointer;
+.table,
+.table-bordered {
+  border-collapse: collapse;
+  font-weight: 700;
+}
+
+.table,
+.table-bordered th,
+.table-bordered td {
+  border-width: 2px !important;
+  border-color: #000 !important;
+  font-weight: bold !important;
+  vertical-align: middle !important;
+}
+
+.table th,
+.table td {
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.table th.product,
+.table td.product {
+  font-weight: 700;
+  text-align: left;
+  white-space: pre-line;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-size: 1.08rem;
+  max-width: 430px;
+}
+
+.table input[type='checkbox'] {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 430px) {
+  .table th,
+  .table td {
+    font-size: 0.95rem;
+    padding: 4px 2px !important;
   }
-  
-  .accordion-button:not(.collapsed) {
-    background-color: #f8f9fa;
+  .table th.product,
+  .table td.product {
+    font-size: 1.13rem;
   }
-  
-  .table > tbody > tr > td input {
-    width: 100%;
-  }
-  
+}
