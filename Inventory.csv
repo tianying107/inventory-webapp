@@ -12,6 +12,7 @@ Laundry Products,Downy 88oz,$7.00,6,08/21/2024 103oz->88oz
 Laundry Products,Downy Beads 16oz,$8.00,3,Unstopable
 Laundry Products,Downy Beads 20.1oz,$9.00,4,
 Laundry Products,Downy Beads 24oz,$11.00,2,
+Laundry Products,Downy Beads 18.2oz,$8.00,4,
 Laundry Products,Downy Bliss 56oz,$6.00,4,
 Laundry Products,Downy Dryer Sheet 60CT,$5.00,4,
 Laundry Products,Downy Rinse 25.5oz,$5.00,12,
@@ -40,6 +41,7 @@ Laundry Products,Persil 34oz,$4.00,0,40oz->34oz
 Laundry Products,Persil 84oz,$9.00,4,
 Laundry Products,Persil Pods 42 count,$10.00,6,
 Laundry Products,Purex 128oz,$7.00,3,
+Laundry Products,Purex 50oz,$3.00,12,
 Laundry Products,Snuggle 89oz,$6.00,6,
 Laundry Products,Tide 105oz,$12.00,3,mar 6 2024 $11->$13
 Laundry Products,Tide 132 oz,$15.00,1,146->132oz
@@ -54,6 +56,7 @@ Laundry Products,Tide Pod OXI 85 CT,$20.00,3,
 Laundry Products,Tide Power Pod,$10.00,4,25ct
 Laundry Products,Tide Power Pod 32 CT,$13.00,2,32 ct
 Laundry Products,Tide Rinse 48oz,$10.00,11,
+Laundry Products,Suavitel Softner 46oz,$3.00,8,
 Cleaning Products,Cascade 48 ct,$13.00,0,
 Cleaning Products,Clorox Bleach 81oz,$4.50,8,May 15 4->4.5
 Cleaning Products,Clorox Mop Cloth 24CT,$7.00,4,
@@ -163,7 +166,7 @@ Body Wash,Nivea body wash 30oz,$5.00,2,
 Body Wash,Nivea men body Wash,$3.00,10,
 Body Wash,Olay Bar 6pk,$5.00,3,"6-pack, 5/21 6->5"
 Body Wash,Olay Bar 8pk,$7.00,10,
-Body Wash,Olay Premium body wash,$5.00,4,
+Body Wash,Olay Premium body wash,$6.00,4,
 Body Wash,Olay body wash,$4.00,8,
 Body Wash,Old Spice body wash 24oz,$4.00,6,
 Body Wash,Old spice body wash,$3.00,4,
@@ -283,8 +286,9 @@ Skin Care,aveeno lotion,$5.00,2,
 Bags,Food Saver 11x12 roll,$9.00,0,
 Bags,Food Saver 8x15 roll,$9.00,4,
 Bags,Food Saver qt bag,$7.00,0,
-Bags,Glad QT Freezer Bag 30 CT,$2.50,4,
-Bags,Glad Sandwich Bag 100 CT,$2.50,4,
+Bags,Glad QT Freezer Bag 30CT,$2.50,4,
+Bags,Glad Sandwich Bag 100CT,$2.50,4,
+Bags,Glad Trash Bag 10CT,$2.00,10,
 Bags,Glad Trash Bag,$5.00,5,quick tie $5flex $8
 Bags,Glad Trash Bag 34ct,$7.00,5,
 Bags,Glad trash bag 100 count,$15.00,2,
