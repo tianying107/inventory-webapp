@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/inventory-webapp/static/css/main.fa7b096c.css",
-    "main.js": "/inventory-webapp/static/js/main.57a70a0a.js",
+    "main.js": "/inventory-webapp/static/js/main.ce8d4da8.js",
     "index.html": "/inventory-webapp/index.html",
     "main.fa7b096c.css.map": "/inventory-webapp/static/css/main.fa7b096c.css.map",
-    "main.57a70a0a.js.map": "/inventory-webapp/static/js/main.57a70a0a.js.map"
+    "main.ce8d4da8.js.map": "/inventory-webapp/static/js/main.ce8d4da8.js.map"
   },
   "entrypoints": [
     "static/css/main.fa7b096c.css",
-    "static/js/main.57a70a0a.js"
+    "static/js/main.ce8d4da8.js"
   ]
 }
